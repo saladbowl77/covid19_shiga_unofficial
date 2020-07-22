@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>非公式滋賀県コロナ情報サイト</title>
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset-plus-tool/dist/reset.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+  </head>
+  <body>
+    <header>
+      <p>非公式滋賀県コロナ情報サイト</p>
+    </header>
+    <section id="caution">
+      <p> 【重要】本日(7/22)に感染が確認された人数は11人で緊急事態宣言の解除後では最多</p>
+    </section>
+    <main>
+      <section id="covid_19_today"  class="width80">
+        <p class="top_title">滋賀県の本日の感染者数</p>
+        <p id="count_show">128(+11)人</p>
+        <div class="other_data">
+          <div id="bed_used" class="ln-b">
+            <p class="title">入院患者受入病床の稼働率</p>
+            <i class="fas fa-bed" id="bed_percent"></i>
+            <p>4%</p>
+          </div>
+          <div id="bet_counts" class="ln-b">
+            <p class="title">病棟数</p>
+            <i class="fas fa-bed ln-b"></i><i class="fas fa-bed ln-b" id="bed_count"></i>
+            <p>141床</p>
+          </div>
+        </div>
+      </section>
+      <section id="covid_19_level">
+        <h2>コロナとのつきあい方滋賀プランとは</h2>
+        <p>滋賀県が独自に制定したコロナ対策指針です。客観的指標により3段階に分けられています。</p>
+        <div id="graph">
+          <div id="level3" class="level_panel">
+            <h3>特別警戒ステージ</h3>
+            <p class="aboutstage">
+              医療崩壊や感染爆発のリスクが高く、市中感染も拡大傾向にあり、活動の大幅な制限が必要となるステージ。
+            </p>
+          </div>
+          <div id="level2" class="level_panel">
+            <p class="tc">▼いまココ▼</p>
+            <h3>警戒ステージ</h3>
+            <p class="aboutstage">
+              県内もしくは近隣府県で感染拡大の恐れがあり、状況が悪化すれば感染爆発や医療崩壊につながる可能性のあるステージ。
+            </p>
+          </div>
+          <div id="level1" class="level_panel">
+            <h3>注意ステージ</h3>
+            <p class="aboutstage">
+              県内外における感染が一定抑制され、収束しつつあることが明確であり、三密などに注意しながら活動再開を進めるステージ。
+            </p>
+          </div>
+        </div>
+        <a href="https://www.pref.shiga.lg.jp/ippan/bousai/sougo/311971.html" target="_blank" class="icon_link_blank">滋賀県HPコロナとの付き合い方滋賀プラン</a>
+      </section>
+    </main>
+  </body>
+</html>
