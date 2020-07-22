@@ -26,6 +26,8 @@ header p {
 #bed_used,
 #bet_counts{width: 49%;}
 
+#bed_percent,
+#bet_counts{font-size: 2.2em;}
 #bed_percent {color: linear-gradient(90deg, #f4c14e 4%, #6fb8d9 5%);}
 #bed_used p.ln-b {padding: 2px; font-size: 1em;}
 #bed_percent:before {
@@ -36,7 +38,6 @@ header p {
   background-image: linear-gradient(90deg, #f4c14e 4%, #6fb8d9 5%);
 }
 #bet_counts i {
-  font-size: 2.2em;
   color: #f4c14e;
   margin: 0 3px;
 }
