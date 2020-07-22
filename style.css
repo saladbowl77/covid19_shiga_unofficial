@@ -21,34 +21,32 @@ header p {
 #covid_19_today {
   text-align: center;
 }
-#count_show {font-size: 2em;}
-
-#bed_used,
-#bet_counts{width: 49%;}
-
-#bed_percent,
-#bet_counts{font-size: 2.2em;}
+#count_show {
+  font-size: 2em;
+}
+.data_div{width: 33%;}
+#bed_type i,
+#bed_used i,
+#bet_counts i,
+.textvar{
+  font-size: 2.2em;
+}
+#bed_type i:before,
+#bed_used i:before,
+#bed_count:before{
+  color: transparent;
+  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+#bed_type i {color: linear-gradient(90deg, #FF4D4D 5%, #6fb8d9 6%);}
+#bed_type i:before {background-image: linear-gradient(90deg, #FF4D4D 5%, #6fb8d9 6%);}
 #bed_percent {color: linear-gradient(90deg, #f4c14e 4%, #6fb8d9 5%);}
-#bed_used p.ln-b {padding: 2px; font-size: 1em;}
-#bed_percent:before {
-  color: transparent;
-  position: relative;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(90deg, #f4c14e 4%, #6fb8d9 5%);
-}
-#bet_counts i {
-  color: #f4c14e;
-  margin: 0 3px;
-}
+#bed_percent:before {background-image: linear-gradient(90deg, #f4c14e 4%, #6fb8d9 5%);}
+
+#bet_counts i, .textvar {color: #f4c14e; margin: 0 3px;}
 #bed_count {color: linear-gradient(90deg, #f4c14e 41%, #fff 42%);}
-#bed_count:before {
-  color: transparent;
-  position: relative;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(90deg, #f4c14e 41%, #fff 42%);
-}
+#bed_count:before {background-image: linear-gradient(90deg, #f4c14e 41%, #fff 42%);}
 
 #covid_19_level #graph {
   display: flex;
@@ -60,15 +58,13 @@ header p {
   color: white;
   margin: 0 10px;
   border-radius: 10px;
-  min-width: 300px;
 }
 #level3 {background-color: blueviolet;}
 #level2 {background-color: red;}
 #level1 {background-color: #EFCB00;}
 #level3 h3, #level1 h3 {margin-top: 24px;}
 @media screen and (max-width: 850px) {
-  #bed_used,
-  #bet_counts{width: 100%;}
+  .data_div{width: 100%;}
   .ln-b {display: block;}
 }
 @media screen and (max-width: 999px) {
@@ -78,10 +74,12 @@ header p {
   }
   .level_panel {
     width: 300px;
+    min-width: 300px;
   }
 }
 @media screen and (min-width: 1000px) {
   #covid_19_level {width: 80%; margin: 10px 10%;}
+  .graph {width: 100%;}
   .level_panel {
     width: 30%;
   }
