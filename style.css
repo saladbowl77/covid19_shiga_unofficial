@@ -108,7 +108,7 @@ header p {
   padding: 10px 0;
 }
 .line_count p:last-child {
-  padding: 0;
+  padding-bottom: 0!important;
 }
 .ln-b {display: block;}
 .chartContainer {
