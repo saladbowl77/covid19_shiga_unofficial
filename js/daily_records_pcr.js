@@ -43,8 +43,8 @@ function records_pcr_Chart(data) {
             ticks: {
              fontColor: "rgb(0, 0, 0, 0)",
              min: 0,
-             max: 120,
-             stepSize: 20
+             max: 150,
+             stepSize: 30
              }
           }]
         }
