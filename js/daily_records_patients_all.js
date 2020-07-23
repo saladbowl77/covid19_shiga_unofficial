@@ -43,8 +43,8 @@ function patients_all_Chart(data) {
             ticks: {
              fontColor: "rgb(0, 0, 0, 0)",
              min: 0,
-             max: 160,
-             stepSize: 40
+             max: 150,
+             stepSize: 30
              }
           }]
         }

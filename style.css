@@ -84,20 +84,28 @@ header p {
 .line_count {
   width: 30px;
   position: absolute;
-  top: -10px;
   left: -1px;
   background-color: #fff;
   z-index: 999;
   text-align: right;
 }
+#pcr_count .line_count  {
+  top: -10px;
+}
 #pcr_count .line_count p {
   padding: 6px 0;
+}
+#all_patients .line_count {
+  top: -29px;
 }
 #all_patients .line_count p {
   padding: 2px 0;
 }
+#daily_patients .line_count {
+  top: -15px;
+}
 #daily_patients .line_count p {
-  padding: 4px 0;
+  padding: 10px 0;
 }
 .line_count p:last-child {
   padding: 0;
