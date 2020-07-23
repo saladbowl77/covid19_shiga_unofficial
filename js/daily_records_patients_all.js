@@ -54,7 +54,7 @@ function patients_all_Chart(data) {
 
 function main() {
   const req = new XMLHttpRequest();
-  const filePath = '../data/daily_records_patients_all.csv';
+  const filePath = '/data/daily_records_patients_all.csv';
   req.open("GET", filePath, true);
   req.onload = function() {
     data = patients_all_Array(req.responseText);
