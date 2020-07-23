@@ -54,7 +54,7 @@ function patients_daily_Chart(data) {
 
 function main() {
   const req = new XMLHttpRequest();
-  const filePath = '/data/daily_records_patients_daily.csv';
+  const filePath = '/covid19_shiga_unofficial/data/daily_records_patients_daily.csv';
   req.open("GET", filePath, true);
   req.onload = function() {
     data = patients_daily_Array(req.responseText);
