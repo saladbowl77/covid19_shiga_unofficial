@@ -19,18 +19,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
   <body>
     <header>
       <p>非公式滋賀県コロナ情報サイト</p>
     </header>
     <section id="caution">
-      <p> 【重要】本日(7/22)に感染が確認された人数は11人で緊急事態宣言の解除後では最多</p>
+      <p> 【重要】本日(7/22)に感染が確認された人数は17人で緊急事態宣言の解除後では最多</p>
     </section>
     <main>
-      <section id="covid_19_today"  class="width80">
+      <section id="covid_19_today" class="width80">
         <p class="top_title">滋賀県の本日の感染者数</p>
-        <p id="count_show">128(+11)人</p>
+        <p id="count_show">145(+17)人</p>
         <div class="other_data">
           <div id="bed_type" class="ln-b data_div">
             <p class="title">入院者の症状</p>
@@ -46,6 +48,53 @@
             <p class="title">病棟数</p>
             <i class="fas fa-bed ln-b"></i><i class="fas fa-bed ln-b" id="bed_count"></i>
             <p class="textvar ln-b">141床</p>
+          </div>
+        </div>
+      </section>
+      <section id="covid_19_data" class="width80">
+        <div id="pcr_count" class="graphs">
+          <h2>PCR検査数</h2>
+          <div class="chart_all_wrap">
+            <div class="line_count">
+              <p>120</p><p>100</p><p>80</p><p>60</p><p>40</p><p>20</p><p>0</p>
+            </div>
+            <div class="chartWrapper">
+              <div class="chartContainer">
+                <div id="chart_pcr_count" class="chats">
+                  <canvas id="pcr_daily"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="all_patients" class="graphs">
+          <h2>一日あたりの感染者数</h2>
+          <div class="chart_all_wrap">
+            <div class="line_count">
+              <p>14</p><p>12</p><p>10</p><p>8</p><p>6</p><p>4</p><p>2</p><p>0</p>
+            </div>
+            <div class="chartWrapper">
+              <div class="chartContainer">
+                <div id="chart_all_patients" class="chats">
+                  <canvas id="patients_all"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="daily_patients" class="graphs">
+          <h2>一日あたりの感染者数</h2>
+          <div class="chart_all_wrap">
+            <div class="line_count">
+              <p>20</p><p>16</p><p>12</p><p>8</p><p>4</p><p>0</p>
+            </div>
+            <div class="chartWrapper">
+              <div class="chartContainer">
+                <div id="chart_daily_patients" class="chats">
+                  <canvas id="patients_daily"></canvas>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -76,5 +125,9 @@
         <a href="https://www.pref.shiga.lg.jp/ippan/bousai/sougo/311971.html" target="_blank" class="icon_link_blank">滋賀県HPコロナとの付き合い方滋賀プラン</a>
       </section>
     </main>
+    <script src="./js/vueapp.js"></script>
+    <script src="./js/daily_records_pcr.js"></script>
+    <script src="./js/daily_records_patients_daily.js"></script>
+    <script src="./js/daily_records_patients_all.js"></script>
   </body>
 </html>

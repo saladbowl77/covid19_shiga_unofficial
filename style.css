@@ -1,3 +1,14 @@
+.chartWrapper {
+   position: relative;
+}
+
+.chartWrapper > canvas {
+   position: absolute;
+   left: 0;
+   top: 0;
+   pointer-events:none;
+}
+
 p, a, h2, h3{font-family: 'Noto Sans JP', sans-serif;}
 .tc {text-align: center;}
 .ln-b {display: inline-block;}
@@ -17,7 +28,7 @@ header p {
   background-color: lightcoral;
   color: white;
 }
-.width80 {width: 80vw; margin: 10px 10vw;}
+.width80 {width: 90vw; margin: 10px 5vw;}
 #covid_19_today {
   text-align: center;
 }
@@ -29,7 +40,7 @@ header p {
 #bed_used i,
 #bet_counts i,
 .textvar{
-  font-size: 2.2em;
+  font-size: 23pt;
 }
 #bed_type i:before,
 #bed_used i:before,
@@ -39,9 +50,10 @@ header p {
   background-clip: text;
   -webkit-background-clip: text;
 }
-#bed_type i {color: linear-gradient(90deg, #FF4D4D 5%, #6fb8d9 6%);}
+#bed_type i {color: linear-gradient(90deg, #FF4D4D 6%, #6fb8d9 7%);}
 #bed_type i:before {background-image: linear-gradient(90deg, #FF4D4D 5%, #6fb8d9 6%);}
-#bed_percent {color: linear-gradient(90deg, #f4c14e 4%, #6fb8d9 5%);}
+
+#bed_percent {color: linear-gradient(90deg, #f4c14e 6%, #6fb8d9 7%);}
 #bed_percent:before {background-image: linear-gradient(90deg, #f4c14e 4%, #6fb8d9 5%);}
 
 #bet_counts i, .textvar {color: #f4c14e; margin: 0 3px;}
@@ -63,9 +75,62 @@ header p {
 #level2 {background-color: red;}
 #level1 {background-color: #EFCB00;}
 #level3 h3, #level1 h3 {margin-top: 24px;}
-@media screen and (max-width: 850px) {
-  .data_div{width: 100%;}
-  .ln-b {display: block;}
+
+.graphs h2 {
+  width: 100%;
+  text-align: center;
+}
+.chart_all_wrap {position: relative;}
+.line_count {
+  width: 30px;
+  position: absolute;
+  top: -10px;
+  left: -1px;
+  background-color: #fff;
+  z-index: 999;
+}
+#pcr_count .line_count p {
+  padding: 6px 0;
+  text-align: right;
+}
+#all_patients .line_count p {
+  padding: 4px 0;
+}
+#daily_patients .line_count p {
+  padding: 9px 0;
+}
+.line_count p:last-child {
+  padding: 0px 0;
+  text-align: right;
+}
+.ln-b {display: block;}
+.chartContainer {
+   width: 100%;
+   overflow-x: scroll;
+}
+#chart_pcr_count {
+  width: 2500px;
+  height: 300px;
+}
+#chart_all_patients {
+  width: 800px;
+  height: 300px;
+}
+#chart_daily_patients {
+  width: 800px;
+  height: 300px;
+}
+@media screen and (max-width: 849px) {
+  .data_div {display: inline-block; width: 100%;}
+}
+@media screen and (min-width: 850px) {
+  .data_div {display: inline-block; width: 30%;}
+  .graphs {
+    display: inline-block;
+    width: calc(50% - 20px);
+    margin: 5px;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 999px) {
   #covid_19_level #graph {
