@@ -88,20 +88,19 @@ header p {
   left: -1px;
   background-color: #fff;
   z-index: 999;
+  text-align: right;
 }
 #pcr_count .line_count p {
   padding: 6px 0;
-  text-align: right;
 }
 #all_patients .line_count p {
   padding: 4px 0;
 }
 #daily_patients .line_count p {
-  padding: 9px 0;
+  padding: 4px 0;
 }
 .line_count p:last-child {
-  padding: 0px 0;
-  text-align: right;
+  padding: 0;
 }
 .ln-b {display: block;}
 .chartContainer {
