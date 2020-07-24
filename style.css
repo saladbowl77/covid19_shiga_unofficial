@@ -58,7 +58,7 @@ header p {
 
 #bet_counts i, .textvar {color: #f4c14e; margin: 0 3px;}
 #bed_count {color: linear-gradient(90deg, #f4c14e 41%, #fff 42%);}
-#bed_count:before {background-image: linear-gradient(90deg, #f4c14e 41%, #fff 42%);}
+#bed_count:before {background-image: linear-gradient(90deg, #f4c14e 51%, #fff 52%);}
 
 #covid_19_level #graph {
   display: flex;
@@ -108,7 +108,7 @@ header p {
   padding: 10px 0;
 }
 .line_count p:last-child {
-  padding-bottom: 0!important;
+  padding-bottom: 0!important１;
 }
 .ln-b {display: block;}
 .chartContainer {
